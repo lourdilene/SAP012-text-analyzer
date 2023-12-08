@@ -247,26 +247,26 @@ relacionados a cada objetivo de aprendizado.
 
 - **Uso de seletores CSS**
 
-  - [ ] A aplicação utiliza
+  - [x] A aplicação utiliza
         [`seletores CSS de tipo`](https://developer.mozilla.org/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors#type_selectors)
         para estilizar o
         [`<header>`](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/header)
         e o
         [`<footer>`](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/footer).
 
-  - [ ] A aplicação utiliza
+  - [x] A aplicação utiliza
         [`seletores CSS de classe`](https://developer.mozilla.org/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors#class_selectors)
         para estilizar os
         [`<li>`](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/li)
         mencionados anteriormente.
 
-  - [ ] A aplicação utiliza
+  - [x] A aplicação utiliza
         [`seletores de atributo`](https://developer.mozilla.org/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
         para estilizar o
         [`<textarea>`](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/textarea)
         utilizando o atributo `name`.
 
-  - [ ] A aplicação utiliza
+  - [x] A aplicação utiliza
         [`seletores CSS de ID`](https://developer.mozilla.org/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors#id_selectors)
         para estilizar o
         [`<button>`](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/button)
@@ -274,7 +274,7 @@ relacionados a cada objetivo de aprendizado.
 
 - **Modelo de caixa (box model): borda, margem, preenchimento**
 
-  - [ ] As
+  - [x] As
         [`classes CSS`](https://developer.mozilla.org/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors#class_selectors)
         dos
         [`<li>`](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/li)
