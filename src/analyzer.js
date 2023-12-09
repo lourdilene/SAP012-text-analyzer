@@ -1,6 +1,6 @@
 const analyzer = {
   getWordCount: (text) => {
-    const countWordsInText = text.split(" ");
+    const countWordsInText = text.trim().split(" ");
     return countWordsInText.length;
   },
   getCharacterCount: (text) => {
@@ -9,23 +9,45 @@ const analyzer = {
   getCharacterCountExcludingSpaces: (text) => {
     const regex = /[,." "]/g;
     const totalCharactere = text.replace(regex, "");
-    // let totalCharactere = 0;
-    // wordsInText.forEach((word) => {
-    //   totalCharactere = totalCharactere + word.length;
-    // });
     return totalCharactere.length;
   },
   getAverageWordLength: (text) => {
-    return text;
-    //TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro `text` de tipo `string`.
+    const wordsAndNumbersInText = text.trim().split(" ");
+    let wordsLength = 0;
+    wordsAndNumbersInText.forEach((word) => {
+      wordsLength = wordsLength + word.length;
+    });
+
+    const media = wordsLength / wordsAndNumbersInText.length;
+    return parseFloat(media.toFixed(2));
   },
   getNumberCount: (text) => {
-    return text;
-    //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
+    const regex = /[.,!?]$/g;
+    const textWithoutPunctuation = text.replace(regex, "");
+    const wordsAndNumbersInText = textWithoutPunctuation.trim().split(" ");
+    let qntNumbers = 0;
+    wordsAndNumbersInText.forEach((word) => {
+      if (typeof parseInt(word) === "number" && !isNaN(word)) {
+        qntNumbers = qntNumbers + 1;
+      }
+    });
+    return qntNumbers;
   },
   getNumberSum: (text) => {
-    return text;
-    //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
+    const regex = /[.,!?]$/g;
+    const textWithoutPunctuation = text.replace(regex, "");
+    const wordsAndNumbersInText = textWithoutPunctuation.trim().split(" ");
+    let numberSum = 0;
+    wordsAndNumbersInText.forEach((word) => {
+      if (
+        (typeof parseInt(word) === "number" ||
+          typeof parseFloat(word) === "number") &&
+        !isNaN(word)
+      ) {
+        numberSum = numberSum + +word; //convert a string to a number
+      }
+    });
+    return numberSum;
   },
 };
 

@@ -7,6 +7,11 @@ const characterCount = document.querySelector(
 const characterNoSpacesCount = document.querySelector(
   '[data-testid="character-no-spaces-count"]'
 );
+const wordLengthAverage = document.querySelector(
+  '[data-testid="word-length-average"]'
+);
+const numberCount = document.querySelector('[data-testid="number-count"]');
+const numberSum = document.querySelector('[data-testid="number-sum"]');
 textarea.addEventListener("keyup", allMetricsUpdate);
 function allMetricsUpdate() {
   const text = textarea.value;
@@ -14,4 +19,7 @@ function allMetricsUpdate() {
   characterCount.textContent = analyzer.getCharacterCount(text);
   characterNoSpacesCount.textContent =
     analyzer.getCharacterCountExcludingSpaces(text);
+  numberCount.textContent = analyzer.getNumberCount(text);
+  numberSum.textContent = analyzer.getNumberSum(text);
+  wordLengthAverage.textContent = analyzer.getAverageWordLength(text);
 }
