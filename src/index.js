@@ -15,11 +15,14 @@ const numberSum = document.querySelector('[data-testid="number-sum"]');
 textarea.addEventListener("keyup", allMetricsUpdate);
 function allMetricsUpdate() {
   const text = textarea.value;
-  wordCount.textContent = analyzer.getWordCount(text);
-  characterCount.textContent = analyzer.getCharacterCount(text);
+  wordCount.textContent = "Quant. de palavras: " + analyzer.getWordCount(text);
+  characterCount.textContent =
+    "Caracteres: " + analyzer.getCharacterCount(text);
   characterNoSpacesCount.textContent =
+    "Quant. caracteres s/ espaços: " +
     analyzer.getCharacterCountExcludingSpaces(text);
-  numberCount.textContent = analyzer.getNumberCount(text);
-  numberSum.textContent = analyzer.getNumberSum(text);
-  wordLengthAverage.textContent = analyzer.getAverageWordLength(text);
+  numberCount.textContent = "Números: " + analyzer.getNumberCount(text);
+  numberSum.textContent = "Soma de números: " + analyzer.getNumberSum(text);
+  wordLengthAverage.textContent =
+    "Compr. médio das palavras:" + analyzer.getAverageWordLength(text);
 }

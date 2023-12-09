@@ -16,7 +16,7 @@ header {
   font-size: 22px;
 }
 
-.logo {
+img {
   position: absolute;
   left: 250px;
   width: 10px;
@@ -72,15 +72,11 @@ ul {
   box-sizing: border-box;
 }
 
-.left {
-  flex-direction: column;
-}
-
 #reset-button {
   background-color: #ec8f5e;
 }
 
-textarea {
+textarea[name="user-input"] {
   display: block;
   width: 100%;
 }
