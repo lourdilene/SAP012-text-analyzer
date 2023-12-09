@@ -26,9 +26,10 @@ const analyzer = {
     }
     const wordsAndNumbersInText = text.trim().split(" ");
     let wordsLength = 0;
-    wordsAndNumbersInText.forEach((word) => {
+    for (let index = 0; index < wordsAndNumbersInText.length; index++) {
+      const word = wordsAndNumbersInText[index];
       wordsLength = wordsLength + word.length;
-    });
+    }
 
     const media = wordsLength / wordsAndNumbersInText.length;
     return parseFloat(media.toFixed(2));
