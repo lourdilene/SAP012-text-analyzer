@@ -9,23 +9,37 @@
   <body>
     <script src="index.js" type="module"></script>
     <header>
+      <div class="logo">
+        <img src="./images/magnifying_glass.png" alt="magnifying glass" />
+      </div>
       <h1>Analisador de texto</h1>
     </header>
     <main>
       <ul>
-        <li data-testid="word-count" class="metric">Quant. de palavras:</li>
-        <li data-testid="character-count" class="metric">Caracteres:</li>
-        <li data-testid="character-no-spaces-count" class="metric">
-          Quant. caracteres s/ espaços:
+        <li class="metric">
+          Quant. de palavras: <span data-testid="word-count">0</span>
         </li>
-        <li data-testid="number-count" class="metric">Números:</li>
-        <li data-testid="number-sum" class="metric">Soma de números:</li>
-        <li data-testid="word-length-average" class="metric">
+        <li class="metric">
+          Caracteres: <span data-testid="character-count">0</span>
+        </li>
+        <li class="metric">
+          Quant. caracteres s/ espaços:
+          <span data-testid="character-no-spaces-count">0</span>
+        </li>
+        <li class="metric">
+          Números: <span data-testid="number-count">0</span>
+        </li>
+        <li class="metric">
+          Soma de números: <span data-testid="number-sum">0</span>
+        </li>
+        <li class="metric">
           Compr. médio das palavras:
+          <span data-testid="word-length-average">0</span>
         </li>
       </ul>
-      <textarea name="user-input" cols="30" rows="10"></textarea>
+      <h2>Texto de Entrada</h2>
       <button id="reset-button">Limpar métricas</button>
+      <textarea name="user-input" cols="20" rows="10"></textarea>
     </main>
     <footer>
       <p>&lt;&nbsp;Lourdilene Souza&nbsp;/&gt;</p>
