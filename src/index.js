@@ -18,7 +18,7 @@ textarea.addEventListener("keyup", allMetricsUpdate);
 button.addEventListener("click", clearAllMetricsAndText);
 
 function clearAllMetricsAndText() {
-  textarea.value = " ";
+  textarea.value = "";
   wordCount.textContent = "Quant. de palavras: 0";
   characterCount.textContent = "Caracteres: 0";
   characterNoSpacesCount.textContent = "Quant. caracteres s/ espaços: 0";
