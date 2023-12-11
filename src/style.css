@@ -7,7 +7,6 @@ body {
 }
 
 header {
-  /* background-color: #f1eb90; */
   margin-top: 70px;
   margin-bottom: 50px;
   text-align: center;
@@ -19,17 +18,13 @@ header {
 img {
   position: absolute;
   left: 250px;
-  /* width: 10px;
-  height: 10px; */
   z-index: -1;
 }
 
 main {
   width: 80%;
-  /* background-color: #ec8f5e; */
+  text-align: center;
   margin: auto;
-  /* display: flex; */
-  /* flex-direction: ; */
 }
 
 span {
@@ -40,22 +35,17 @@ span {
 h2 {
   color: #0c356a;
   margin-top: 80px;
-  margin-bottom: 20px;
+  margin-bottom: 75px;
   display: inline;
 }
 
-main {
-  text-align: center;
-}
-
 ul {
-  /* list-style-type: none;
-  display: flex; */
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 60px;
+  justify-content: center;
+  padding: 0px;
+  margin-bottom: 20px;
 }
 
 .metric {
@@ -73,12 +63,32 @@ ul {
 }
 
 #reset-button {
-  background-color: #ec8f5e;
+  background-color: #f9b572;
+  border-color: #ec8f5e;
+  border-style: solid;
+  border-radius: 20px;
+  padding: 8px;
+}
+
+#reset-button:hover {
+  cursor: pointer;
+}
+
+#content-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  height: 50px;
 }
 
 textarea[name="user-input"] {
   display: block;
-  width: 100%;
+  width: 90%;
+  margin: auto;
+  border-color: #b6bbc4;
+  border-style: solid;
 }
 
 footer {
