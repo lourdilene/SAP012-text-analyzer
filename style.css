@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+}
+
+body {
+  /* background-color: #f3f3f3; */
+}
+
+header {
+  margin-top: 70px;
+  margin-bottom: 50px;
+  text-align: center;
+  color: #0c356a;
+  position: relative;
+  font-size: 22px;
+}
+
+img {
+  position: absolute;
+  left: 250px;
+  z-index: -1;
+}
+
+main {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
+
+span {
+  color: #0c356a;
+  font-weight: bold;
+}
+
+h2 {
+  color: #0c356a;
+  margin-top: 80px;
+  margin-bottom: 75px;
+  display: inline;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0px;
+  margin-bottom: 20px;
+}
+
+.metric {
+  border-style: solid;
+  background-color: #eeeeee;
+  border-color: #b6bbc4;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 20px;
+  /* width: fit-content; */
+  padding: 10px;
+  width: 30%; /* Ajuste a largura conforme necessário */
+  margin-bottom: 10px; /* Espaçamento entre as linhas */
+  box-sizing: border-box;
+}
+
+#reset-button {
+  background-color: #f9b572;
+  border-color: #ec8f5e;
+  border-style: solid;
+  border-radius: 20px;
+  padding: 8px;
+}
+
+#reset-button:hover {
+  cursor: pointer;
+}
+
+#content-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  height: 50px;
+}
+
+textarea[name="user-input"] {
+  display: block;
+  width: 90%;
+  margin: auto;
+  border-color: #b6bbc4;
+  border-style: solid;
+}
+
+footer {
+  background-color: #3085c3;
+  color: white;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  padding: 10px;
+}
