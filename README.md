@@ -291,10 +291,10 @@ relacionados a cada objetivo de aprendizado.
 
 - **Uso de seletores do DOM**
 
-  - [ ] A aplicação utiliza o
+  - [x] A aplicação utiliza o
         [`seletor do DOM querySelector`](https://developer.mozilla.org/pt-BR/docs/Web/API/Document/querySelector).
 
-  - [ ] A aplicação utiliza o
+  - [x] A aplicação utiliza o
         [`seletor do DOM getElementById`](https://developer.mozilla.org/pt-BR/docs/Web/API/Document/getElementById).
 
 - **Manipulação de eventos do DOM (ouvintes, propagação, delegação)**
