@@ -19,24 +19,24 @@ button.addEventListener("click", clearAllMetricsAndText);
 
 function clearAllMetricsAndText() {
   textarea.value = "";
-  wordCount.textContent = "Quant. de palavras: 0";
-  characterCount.textContent = "Caracteres: 0";
-  characterNoSpacesCount.textContent = "Quant. caracteres s/ espaços: 0";
-  numberCount.textContent = "Números: 0";
-  numberSum.textContent = "Soma de números: 0";
-  wordLengthAverage.textContent = "Compr. médio das palavras: 0";
+  wordCount.textContent = "Word count: 0";
+  characterCount.textContent = "Character count: 0";
+  characterNoSpacesCount.textContent = "Character no spaces count: 0";
+  numberCount.textContent = "Number: 0";
+  numberSum.textContent = "Number sum: 0";
+  wordLengthAverage.textContent = "Word length average: 0";
 }
 
 function allMetricsUpdate() {
   const text = textarea.value;
-  wordCount.textContent = "Quant. de palavras: " + analyzer.getWordCount(text);
+  wordCount.textContent = "Word count: " + analyzer.getWordCount(text);
   characterCount.textContent =
-    "Caracteres: " + analyzer.getCharacterCount(text);
+    "Character count: " + analyzer.getCharacterCount(text);
   characterNoSpacesCount.textContent =
-    "Quant. caracteres s/ espaços: " +
+    "Character no spaces count: " +
     analyzer.getCharacterCountExcludingSpaces(text);
-  numberCount.textContent = "Números: " + analyzer.getNumberCount(text);
-  numberSum.textContent = "Soma de números: " + analyzer.getNumberSum(text);
+  numberCount.textContent = "Number: " + analyzer.getNumberCount(text);
+  numberSum.textContent = "Number sum: " + analyzer.getNumberSum(text);
   wordLengthAverage.textContent =
-    "Compr. médio das palavras: " + analyzer.getAverageWordLength(text);
+    "Word length average: " + analyzer.getAverageWordLength(text);
 }
