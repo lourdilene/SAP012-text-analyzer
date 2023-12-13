@@ -71,11 +71,15 @@ ul {
 }
 
 #copy-button {
-  background-color: #f9b572;
-  border-color: #ec8f5e;
+  background-color: #88ab8e;
+  border-color: #304d30;
   border-style: solid;
   border-radius: 20px;
   padding: 8px;
+}
+
+#copy-button:hover {
+  cursor: pointer;
 }
 
 #reset-button:hover {
