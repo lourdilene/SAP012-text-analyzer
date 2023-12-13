@@ -70,6 +70,14 @@ ul {
   padding: 8px;
 }
 
+#copy-button {
+  background-color: #f9b572;
+  border-color: #ec8f5e;
+  border-style: solid;
+  border-radius: 20px;
+  padding: 8px;
+}
+
 #reset-button:hover {
   cursor: pointer;
 }
