@@ -1,6 +1,9 @@
 import analyzer from "./analyzer.js";
+
 const textarea = document.querySelector('[name="user-input"]');
 const button = document.getElementById("reset-button");
+const copyButton = document.getElementById("copy-button");
+
 const wordCount = document.querySelector('[data-testid="word-count"]');
 const characterCount = document.querySelector(
   '[data-testid="character-count"]'
@@ -16,6 +19,7 @@ const numberSum = document.querySelector('[data-testid="number-sum"]');
 
 textarea.addEventListener("keyup", allMetricsUpdate);
 button.addEventListener("click", clearAllMetricsAndText);
+copyButton.addEventListener("click", copyContent);
 
 function clearAllMetricsAndText() {
   textarea.value = "";
@@ -39,4 +43,18 @@ function allMetricsUpdate() {
   numberSum.textContent = "Number sum: " + analyzer.getNumberSum(text);
   wordLengthAverage.textContent =
     "Word length average: " + analyzer.getAverageWordLength(text);
+}
+
+function copyContent() {
+  textarea.select();
+  textarea.setSelectionRange(0, 99999); // For mobile devices
+
+  navigator.clipboard
+    .writeText(textarea.value)
+    .then(() => {
+      alert("Copied the text: " + textarea.value);
+    })
+    .catch((err) => {
+      alert("Something is wrong: " + err);
+    });
 }
