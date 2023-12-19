@@ -112,6 +112,9 @@ na imagem a seguir:
 ## 4. Meu processo
 
 ### Protótipo
+<div align='center'>
+<img src="prototipo.png" />
+</div>
 
 ### Construído com
 
