@@ -21,28 +21,39 @@ textarea.addEventListener("keyup", allMetricsUpdate);
 button.addEventListener("click", clearAllMetricsAndText);
 copyButton.addEventListener("click", copyContent);
 
+const textWordCount = "Word count: ";
+const textCharacterCount = "Character count: ";
+const textCharacterNoSpacesCount = "Character no spaces count: ";
+const textNumberCount = "Number count: ";
+const textNumberSum = "Number sum: ";
+const textWordLengthAverage = "Word length average: ";
+
 function clearAllMetricsAndText() {
   textarea.value = "";
-  wordCount.textContent = "Word count: 0";
-  characterCount.textContent = "Character count: 0";
-  characterNoSpacesCount.textContent = "Character no spaces count: 0";
-  numberCount.textContent = "Number: 0";
-  numberSum.textContent = "Number sum: 0";
-  wordLengthAverage.textContent = "Word length average: 0";
+  wordCount.textContent = textWordCount + 0;
+  characterCount.textContent = textCharacterCount + 0;
+  characterNoSpacesCount.textContent = textCharacterNoSpacesCount + 0;
+  numberCount.textContent = textNumberCount + 0;
+  numberSum.textContent = textNumberSum + 0;
+  wordLengthAverage.textContent = textWordLengthAverage + 0;
 }
 
 function allMetricsUpdate() {
   const text = textarea.value;
-  wordCount.textContent = "Word count: " + analyzer.getWordCount(text);
-  characterCount.textContent =
-    "Character count: " + analyzer.getCharacterCount(text);
-  characterNoSpacesCount.textContent =
-    "Character no spaces count: " +
-    analyzer.getCharacterCountExcludingSpaces(text);
-  numberCount.textContent = "Number: " + analyzer.getNumberCount(text);
-  numberSum.textContent = "Number sum: " + analyzer.getNumberSum(text);
-  wordLengthAverage.textContent =
-    "Word length average: " + analyzer.getAverageWordLength(text);
+  wordCount.textContent = `${textWordCount} ${analyzer.getWordCount(text)}`;
+  characterCount.textContent = `${textCharacterCount} ${analyzer.getCharacterCount(
+    text
+  )}`;
+  characterNoSpacesCount.textContent = `${textCharacterNoSpacesCount} ${analyzer.getCharacterCountExcludingSpaces(
+    text
+  )}`;
+  numberCount.textContent = `${textNumberCount} ${analyzer.getNumberCount(
+    text
+  )}`;
+  numberSum.textContent = `${textNumberSum} ${analyzer.getNumberSum(text)}`;
+  wordLengthAverage.textContent = `${textWordLengthAverage} ${analyzer.getAverageWordLength(
+    text
+  )}`;
 }
 
 function copyContent() {

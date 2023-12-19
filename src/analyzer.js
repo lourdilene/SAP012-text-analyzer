@@ -1,7 +1,10 @@
 const analyzer = {
-  getWordCount: (text) => {
+  isTextValid: (text) => {
     const pattern = /[a-zA-Z0-9_]/;
-    if (text.trim().length === 0 || !pattern.test(text)) {
+    return text.trim().length > 0 && pattern.test(text);
+  },
+  getWordCount: (text) => {
+    if (!analyzer.isTextValid(text)) {
       return 0;
     }
     const countWordsInText = text.trim().split(" ");
@@ -11,8 +14,7 @@ const analyzer = {
     return text.length;
   },
   getCharacterCountExcludingSpaces: (text) => {
-    const pattern = /[a-zA-Z0-9_]/;
-    if (text.trim().length === 0 || !pattern.test(text)) {
+    if (!analyzer.isTextValid(text)) {
       return 0;
     }
     const regex = /[,." "]/g;
@@ -20,23 +22,21 @@ const analyzer = {
     return totalCharactere.length;
   },
   getAverageWordLength: (text) => {
-    const pattern = /[a-zA-Z0-9_]/;
-    if (text.trim().length === 0 || !pattern.test(text)) {
+    if (!analyzer.isTextValid(text)) {
       return 0;
     }
     const wordsAndNumbersInText = text.trim().split(" ");
     let wordsLength = 0;
     for (let index = 0; index < wordsAndNumbersInText.length; index++) {
       const word = wordsAndNumbersInText[index];
-      wordsLength = wordsLength + word.length;
+      wordsLength += word.length;
     }
 
     const media = wordsLength / wordsAndNumbersInText.length;
     return parseFloat(media.toFixed(2));
   },
   getNumberCount: (text) => {
-    const pattern = /[a-zA-Z0-9_]/;
-    if (text.trim().length === 0 || !pattern.test(text)) {
+    if (!analyzer.isTextValid(text)) {
       return 0;
     }
     const regex = /[.,!?]$/g;
@@ -45,12 +45,15 @@ const analyzer = {
     let qntNumbers = 0;
     wordsAndNumbersInText.forEach((word) => {
       if (typeof parseInt(word) === "number" && !isNaN(word)) {
-        qntNumbers = qntNumbers + 1;
+        qntNumbers += 1;
       }
     });
     return qntNumbers;
   },
   getNumberSum: (text) => {
+    if (!analyzer.isTextValid(text)) {
+      return 0;
+    }
     const regex = /[.,!?]$/g;
     const textWithoutPunctuation = text.replace(regex, "");
     const wordsAndNumbersInText = textWithoutPunctuation.trim().split(" ");
@@ -61,7 +64,7 @@ const analyzer = {
           typeof parseFloat(word) === "number") &&
         !isNaN(word)
       ) {
-        numberSum = numberSum + +word; //convert a string to a number
+        numberSum += +word; //convert a string to a number
       }
     });
     return numberSum;
